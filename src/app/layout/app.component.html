@@ -1,0 +1,29 @@
+<div *ngIf="authentication">
+  <!-- <div *ngIf="true"> -->
+ 
+<div class="header">
+  <button type="button" class="pull-left" mat-button (click)="drawer.toggle()">Menu</button>
+  <h1 class="pull-left">{{title}}</h1>
+  <!-- <button class="pull-right" mat-button [routerLink]=" ['./logout'] ">Logout!</button> -->
+  <button class="pull-right" mat-button (click)="logout()">Logout!</button>
+</div>
+  
+  <mat-sidenav-container class="example-container" autosize>
+
+    <mat-sidenav  #drawer class="example-sidenav" mode="side">
+
+      <app-left-panel></app-left-panel>
+
+    </mat-sidenav>
+
+    <div>
+
+      <router-outlet></router-outlet>
+
+    </div>
+
+  </mat-sidenav-container>
+
+</div>
+
+<div *ngIf="!authentication"><app-login></app-login></div>

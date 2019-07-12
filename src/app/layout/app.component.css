@@ -1,0 +1,16 @@
+.example-container {
+    position: absolute;
+    top: 75px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+.header {
+    height: 75px;
+    background: lightblue;
+}
+
+.example-sidenav{
+    width: 200px;
+}
